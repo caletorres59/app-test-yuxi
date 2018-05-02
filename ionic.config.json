@@ -1,0 +1,8 @@
+{
+  "name": "test-ionic-yuxi",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
