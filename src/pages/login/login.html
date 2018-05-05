@@ -1,0 +1,83 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Login</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <img src="assets/imgs/log01.png"
+         alt=""
+         style="padding: 0 !important;">
+    <ion-grid>
+
+        <ion-row>
+            <ion-col col-12>
+
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+    <ion-list>
+        <form #form="ngForm"
+              [formGroup]="myForm"
+              (ngSubmit)="login()"
+              novalidate>
+            <ion-item>
+                <ion-label floating>Email</ion-label>
+                <ion-input type="email"
+                           required
+                           ngControl="email"
+                           formControlName="email"></ion-input>
+                <ion-item *ngIf="myForm.get('email').errors && myForm.get('email').dirty">
+                    <p color="danger"
+                       ion-text
+                       *ngIf="myForm.get('email').hasError('required')">Field is required</p>
+                    <p color="danger"
+                       ion-text
+                       *ngIf="myForm.get('email').hasError('email')">It is not an email</p>
+                </ion-item>
+
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Password</ion-label>
+                <ion-input type="password"
+                           ngControl="password"
+                           formControlName="password"></ion-input>
+
+            </ion-item>
+
+            <div padding>
+                <button ion-button
+                        full
+                        class="btn-app"
+                        type="submit"
+                        [disabled]="myForm.invalid">Login</button>
+            </div>
+
+        </form>
+        <div padding>
+            <button ion-button
+                    full
+                    class="btn-app"
+                    (click)='goToSignUp()'>Sign Up</button>
+        </div>
+        <ion-item>
+
+        </ion-item>
+
+        <ion-item>
+
+        </ion-item>
+
+    </ion-list>
+
+</ion-content>
