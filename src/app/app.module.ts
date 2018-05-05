@@ -21,7 +21,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { SignUpProvider } from '../providers/sign-up/sign-up';
 import { ListpostProvider } from '../providers/listpost/listpost';
 import { HttpClientModule } from '@angular/common/http';
-import { PostDetailsProvider } from '../providers/post-details/post-details';
 export const firebaseConfig = 
   {
     apiKey: "AIzaSyBPFQWqCiQ8UjKT3unoGuNG5VBA7iB1pEs",
@@ -64,8 +63,7 @@ export const firebaseConfig =
     {provide: ErrorHandler, useClass: IonicErrorHandler},
    
     SignUpProvider,
-    ListpostProvider,
-    PostDetailsProvider
+    ListpostProvider
   ]
 })
 export class AppModule {}

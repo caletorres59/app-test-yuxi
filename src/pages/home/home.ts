@@ -27,8 +27,9 @@ export class HomePage {
       // imageData is either a base64 encoded string or a file URI
       // If it's base64:
       this.imgGuest = 'data:image/jpeg;base64,' + imageData;
-      const pictures = storage().ref('pictures');
-      pictures.putString(this.imgGuest, 'data_url');
+      //tengo una duda si toca o no guardar en cloud storage
+      // const pictures = storage().ref('pictures');
+      // pictures.putString(this.imgGuest, 'data_url');
       this.comMessage = false;
       this.comPicture = true;
       
